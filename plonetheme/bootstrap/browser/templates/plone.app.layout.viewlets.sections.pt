@@ -19,10 +19,10 @@
 
                 <div class="nav-collapse collapse">
                     <ul class="nav" id="navigation">
-                        
-                        
+
+
                         <tal:tabs tal:repeat="tab nav">
-                            
+
                                 <li tal:define="tid tab/id"
                                     tal:attributes="id string:portaltab-${tid};
                                                     class python:selected_tab==tid and 'active' or ''">
@@ -32,9 +32,10 @@
                                                         title item/description|nothing">
                                         Tab Name
                                     </a>
-                                    
+
                                 </li>
-                            
+                                <li class="divider-vertical"></li>
+
                         </tal:tabs>
                     </ul>
                 </div>

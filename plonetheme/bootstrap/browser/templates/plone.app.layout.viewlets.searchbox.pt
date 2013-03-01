@@ -17,23 +17,26 @@
                id="searchGadget"
                class="searchField search-query inputLabel input-medium" />
 
-        <button i18n:translate="label_search" class="btn" type="submit">Search</button>
+        <button class="btn" type="submit">
+          <i class="icon-search"></i>
+          <tal:block i18n:translate="label_search">Search</tal:block>
+        </button>
 
         <div class="searchSection">
-            <label for="searchbox_currentfolder_only"
+            <label for="searchbox_currentfolder_only" class="checkbox pull-right"
                    style="cursor: pointer">
-              <span
-                   i18n:translate="label_searchbox_currentfolder_only"
-                   tal:omit-tag="">
-                only in current section
-              </span>
               <input id="searchbox_currentfolder_only"
                      class="noborder"
                      type="checkbox"
                      name="path"
                      tal:attributes="value view/folder_path;
                                      checked request/form/path|nothing"
-                     />
+                     >
+              <span
+                   i18n:translate="label_searchbox_currentfolder_only"
+                   tal:omit-tag="">
+                only in current section
+              </span>
 
             </label>
         </div>
